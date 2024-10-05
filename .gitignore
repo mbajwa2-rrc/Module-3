@@ -1,0 +1,16 @@
+git init
+
+https://github.com/mbajwa2-rrc/Module-3.git
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Visual Studio Code
+.vscode/
+
