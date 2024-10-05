@@ -36,39 +36,27 @@ for account, balance in accounts.items():
         rate = 0.05
 
 
-new_balance = balance + ((balance * rate) / 12)
-accounts[account] = new_balance
+    new_balance = balance + ((balance * rate) / 12)
+    accounts[account] = new_balance
 
 
-print("/nUpdated Balances after Interest Calculation:")
+print("\nUpdated Balances after Interest Calculation:")
 pprint(accounts)
 
 
-
 initials = 'MB'  
-csv_filename = f'updated_balances_MB.csv'
+csv_filename = f'updated_balances_{initials}.csv'
 
 with open(csv_filename, 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(['Account', 'Balance'])  
-    for account, balance in account_balances.items():
-        writer.writerow([account, f"{balance:.6f}"])  
-        with open(csv_filename, 'r') as csvfile:
-            reader = csv.DictReader(csvfile)
-    for row in reader:
-        print(row)
-
-filename = 'updated_balances_MB.csv' 
-with open(filename, 'w', newline='') as csvfile:
-    writer = csv.writer(csvfile)
-    writer.writerow(['Account', 'Balance'])
     for account, balance in accounts.items():
-        writer.writerow([account, f"{balance:6f}"])
+        writer.writerow([account, f"{balance:.6f}"])  
 
-print(f"/nUpdated balances written to {filename}.")
+print(f"\nUpdated balances written to {csv_filename}.")
 
 
-with open(filename, 'r') as csvfile:
+with open(csv_filename, 'r') as csvfile:
     reader = csv.DictReader(csvfile)
     print("\nContents of the Updated Balances CSV:")
     for row in reader:
