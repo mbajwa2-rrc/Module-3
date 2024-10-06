@@ -2,7 +2,7 @@ code .
 
 # Module-3
 
-## Using loops and logic to generate various possible outcomes. Logic and loops are fundamental programming concepts that may be used in any programming concepts that may be used in any programming language. 
+## Using loops and logic to generate various possible outcomes. Logic and loops are fundamental programming concepts that may be used in any programming language. 
 
 Module-3
 
